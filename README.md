@@ -1,6 +1,8 @@
 Simple example of using the catch library and gtest for unit test and gcov coverage stats.
 You can use any testing framework, e.g. catch in the same way.
 
+NB, i am using conanio to source the gtest dependancy from the bincrafters repo. [https://api.bintray.com/conan/bincrafters/public-conan]
+
 > mkdir build
 
 > cd build
