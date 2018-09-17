@@ -21,9 +21,14 @@ file( GLOB TESTFILES ../tests/*.cpp )
 set (main ${CMAKE_CURRENT_SOURCE_DIR}/./main.cpp)
 list(REMOVE_ITEM APP_FILES ${main})
 
-#terget for the the program
+#target for the the program
 add_executable(app main.cpp ${APP_FILES})
 target_link_libraries(app)
+
+#target for the the program with debug symbols
+add_executable(app-debug main.cpp ${APP_FILES})
+target_link_libraries(app-debug)
+target_compile_options(app-debug PRIVATE -g)
 
 #target for the tests
 add_executable(tests ${TESTFILES} ${APP_FILES} )
