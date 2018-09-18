@@ -3,11 +3,11 @@
 
 
 TEST( aproximatlyEqual, vec3 ) {
-    EXPECT_EQ( math::aproximatlyEqual(1,1) , true );
-    EXPECT_EQ( math::aproximatlyEqual(0.999,1) , true );
-    EXPECT_EQ( math::aproximatlyEqual(0.0,-0.0001) , true );
-    EXPECT_EQ( math::aproximatlyEqual(0.0, 0.01) , false );
-    EXPECT_EQ( math::aproximatlyEqual(1000.0, 1000.01) , false );
+    EXPECT_EQ( math::approximatelyEqual(1,1) , true );
+    EXPECT_EQ( math::approximatelyEqual(0.999,1) , true );
+    EXPECT_EQ( math::approximatelyEqual(0.0,-0.0001) , true );
+    EXPECT_EQ( math::approximatelyEqual(0.0, 0.01) , false );
+    EXPECT_EQ( math::approximatelyEqual(1000.0, 1000.01) , false );
 }
 
 TEST( lenSq , vec3 ) {
@@ -17,7 +17,7 @@ TEST( lenSq , vec3 ) {
 }
 
 TEST( length, vec3 ) {
-    EXPECT_EQ( math::aproximatlyEqual(math::vec3(0.707,0.707,0).len(), 1),true );
+    EXPECT_EQ( math::approximatelyEqual(math::vec3(0.707,0.707,0).len(), 1),true );
     EXPECT_EQ( math::vec3(2,3,6).len() , 7 );
 }
 
